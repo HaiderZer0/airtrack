@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://fonts.googleapis.com/css?family=Inria Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="Design.css">
+    <script src="Controller.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <img class="sidebarDesign" src="images/sidebarDesign.svg">
+        <div class="heading">
+            <img src="logos/logo.svg" alt="logo">
+            <img class="logoName" src="images/Name.svg" alt="logoName">
+        </div>
+        <Input class="info" id="origin" value="Origin - Airport" onfocus="selectText()"></Input>
+        <Input class="info" id="destination" value="Destination - Airport"></Input>
+        <Input class="info" id="day" value="Day"></Input>
+
+        <div id="search" onclick="search()">Search</div>
+    </div>
+    <div class="main" >
+        <div class="crop"></div>
+        <video autoplay loop muted class="bgVideo">
+            <source src="images/bgVideo.mp4" type="video/mp4">
+        </video>
+        <div class="filters">
+            <div class="filter" onclick="changePriceIcon()">
+                <img id="1" src="images/arrowUP.svg">
+                <h4 class="filterText">Price</h4>
+            </div>
+            <div class="filter" onclick="changeOptions()">
+                <img id="2" class="logo" src="logos/ryanairLogo.png">
+                <h4 id="options" class="filterText">Ryan Air</h4>
+            </div>
+            <div class="filter" onclick="changeTimeIcon()">
+                <img id="3" src="images/arrowDOWN.svg">
+                <h4 class="filterText">Time</h4>
+            </div>
+        </div>
+        <div class="content">
+            <h2 class="date" id="Maindate">----------</h2>
+            <h4 class="airports" id="Mainairports">--- - ---</h4>
+            <div class="flights" id="flightData">
+        
+            </div>
+        </div>
+    </div>
+</body>
+</html>
